@@ -1,0 +1,1 @@
+Este projeto foi desenvolvido como trabalho de faculdade com o objetivo de criar um interpretador simples, capaz de ler e executar comandos de uma linguagem própria chamada PongScript, que interage com um jogo de Pong feito em Python usando a biblioteca Pygame
