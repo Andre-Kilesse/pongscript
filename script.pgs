@@ -1,0 +1,8 @@
+classe PongGame
+  met iniciar_objetos
+  met reiniciar_bola
+  met lidar_eventos
+  met lidar_entrada
+  met atualizar_bola
+  met desenhar
+  met executar
