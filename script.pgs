@@ -1,8 +1,14 @@
 classe PongGame
-  met iniciar_objetos
-  met reiniciar_bola
-  met lidar_eventos
-  met lidar_entrada
-  met atualizar_bola
-  met desenhar
-  met executar
+var WIDTH = 800
+var HEIGHT = 600
+var BALL_SPEED = [6, 6]
+var PADDLE_SPEED = 8
+var SPEED_INCREMENT = 0.3
+var COLOR = [150, 100, 105]
+met iniciar_objetos
+met reiniciar_bola
+met lidar_eventos
+met lidar_entrada
+met atualizar_bola
+met desenhar
+met executar

@@ -6,8 +6,9 @@ class PongGame:
         self.WIDTH, self.HEIGHT = 800, 600
         self.BALL_SPEED = [4, 4]
         self.PADDLE_SPEED = 6
-        self.WHITE = (255, 255, 255)
         self.SPEED_INCREMENT = 0.2
+        self.COR = (255, 255, 255)
+        self.WHITE = (255, 255, 255)
 
         self.screen = pygame.display.set_mode((self.WIDTH, self.HEIGHT))
         pygame.display.set_caption("Pong")
@@ -17,12 +18,9 @@ class PongGame:
 
         self.score1 = 0
         self.score2 = 0
-        self.last_winner = 1  #1=left
+        self.last_winner = 1
 
         self.running = True
-
-        self.init_objects()
-        self.reset_ball()
 
     def init_objects(self):
         self.ball = pygame.Rect(self.WIDTH // 2 - 15, self.HEIGHT // 2 - 15, 30, 30)
@@ -83,12 +81,13 @@ class PongGame:
 
     def draw(self):
         self.screen.fill((0, 0, 0))
-        pygame.draw.rect(self.screen, self.WHITE, self.paddle1)
-        pygame.draw.rect(self.screen, self.WHITE, self.paddle2)
-        pygame.draw.ellipse(self.screen, self.WHITE, self.ball)
-        pygame.draw.aaline(self.screen, self.WHITE, (self.WIDTH // 2, 0), (self.WIDTH // 2, self.HEIGHT))
+        cor = getattr(self, 'COLOR', self.WHITE)
+        pygame.draw.rect(self.screen, cor, self.paddle1)
+        pygame.draw.rect(self.screen, cor, self.paddle2)
+        pygame.draw.ellipse(self.screen, cor, self.ball)
+        pygame.draw.aaline(self.screen, cor, (self.WIDTH // 2, 0), (self.WIDTH // 2, self.HEIGHT))
 
-        score_text = self.font.render(f"{self.score1}     {self.score2}", True, self.WHITE)
+        score_text = self.font.render(f"{self.score1}     {self.score2}", True, cor)
         self.screen.blit(score_text, (self.WIDTH // 2 - 30, 20))
 
         pygame.display.flip()
