@@ -6,13 +6,13 @@ class PongInterpreter:
         self.script_path = script_path
         self.commands = []
         self.command_map = {
-            'iniciar_objetos': 'init_objects',
-            'reiniciar_bola': 'reset_ball',
-            'lidar_eventos': 'handle_events',
-            'lidar_entrada': 'handle_input',
-            'atualizar_bola': 'update_ball',
-            'desenhar': 'draw',
-            'executar': 'run'
+            'inicializar_jogo': 'init_objects',
+            'reposicionar_bola': 'reset_ball',
+            'verificar_eventos': 'handle_events',
+            'controlar_jogador': 'handle_input',
+            'mover_bola': 'update_ball',
+            'renderizar_tela': 'draw',
+            'rodar_jogo': 'run'
         }
         self.game = None
         self.class_defined = False
