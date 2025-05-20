@@ -18,7 +18,7 @@ class PongInterpreter:
         self.class_defined = False
         self.allowed_vars = [
             'WIDTH', 'HEIGHT', 'BALL_SPEED', 'PADDLE_SPEED',
-            'SPEED_INCREMENT', 'COLOR', 'BACKGROUND'
+            'SPEED_INCREMENT', 'COLOR'
         ]
 
     def carregar_script(self):
@@ -26,7 +26,7 @@ class PongInterpreter:
             self.commands = [linha.strip() for linha in f if linha.strip()]
 
     def analisar_lexica(self, linha):
-        return linha.split()  # Removido .lower()
+        return linha.split()
 
     def analisar_sintatica(self, tokens):
         if tokens[0] == 'classe' and 'PongGame' in tokens[1]:

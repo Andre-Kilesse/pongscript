@@ -16,5 +16,6 @@ classe PongGame
         var SPEED_INCREMENT = 0.3
     met renderizar_tela
         var COLOR = [150, 100, 105]
+
     met rodar_jogo
 
