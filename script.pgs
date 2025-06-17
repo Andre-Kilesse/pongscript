@@ -1,20 +1,23 @@
 classe PongGame
+var WIDTH = 800
+var HEIGHT = 600
+var FPS = 60
 
-    var WIDTH = 800
-    var HEIGHT = 600
+imprimir "Jogo iniciado"
 
-    met inicializar_jogo
-        var PADDLE_SPEED = 8
-        var BALL_SPEED = [6, 6]
+met iniciar_objetos
+    var BALL_SPEED = [5, 5]
+    var PADDLE_SPEED = 8
 
-    met reposicionar_bola
-    met verificar_eventos
-    met controlar_jogador
+met reiniciar_bola
+met lidar_eventos
+met lidar_entrada
 
-    met mover_bola
-        var SPEED_INCREMENT = 0.3
-    met renderizar_tela
-        var COLOR = [150, 100, 105]
+met atualizar_bola
+    var SPEED_INCREMENT = 0.3
 
-    met rodar_jogo
+met desenhar
+    var COLOR = [150, 100, 105]
+    var BACKGROUND = [0, 0, 0]
 
+met executar
